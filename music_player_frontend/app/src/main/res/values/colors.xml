@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color palette per request -->
+    <color name="mp_primary">#1DB954</color>
+    <color name="mp_secondary">#191414</color>
+    <color name="mp_accent">#FFCE00</color>
+    <color name="mp_white">#FFFFFFFF</color>
+    <color name="mp_text_secondary">#BCBCBC</color>
+    <color name="mp_overlay">#1AFFFFFF</color>
+</resources>
