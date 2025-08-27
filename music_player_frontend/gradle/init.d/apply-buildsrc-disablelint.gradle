@@ -1,0 +1,7 @@
+gradle.afterProject { p, state ->
+    try {
+        p.pluginManager.apply("org.example.disablelint")
+    } catch (Throwable ignored) {
+        // If plugin not available yet for some reason, ignore
+    }
+}

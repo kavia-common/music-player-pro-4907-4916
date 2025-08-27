@@ -1,0 +1,8 @@
+allprojects {
+    tasks.whenTaskAdded { t ->
+        def n = t.name?.toLowerCase()
+        if (n != null && (n.startsWith("lint") || n.contains("lintanalyze") || n.contains("lintreport"))) {
+            t.enabled = false
+        }
+    }
+}

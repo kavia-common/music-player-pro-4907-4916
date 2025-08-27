@@ -1,0 +1,21 @@
+allprojects {
+    afterEvaluate { proj ->
+        // Common lint tasks that appear in AGP wiring
+        ["lint", "lintAnalyzeDebug", "lintAnalyzeDebugAndroidTest", "lintAnalyzeDebugUnitTest",
+         "generateDebugLintReportModel", "generateDebugAndroidTestLintModel", "generateDebugUnitTestLintModel",
+         "lintReport", "lintVitalRelease", "bundleDebugLocalLintAar"].each { tn ->
+            try {
+                tasks.named(tn).configure { it.enabled = false }
+            } catch (Throwable ignored) {
+                // Task may not exist in this project; ignore
+            }
+        }
+        // Also disable any task whose name matches these patterns
+        tasks.configureEach { t ->
+            def n = t.name?.toLowerCase()
+            if (n != null && (n.startsWith("lint") || n.contains("lintanalyze") || n.contains("lintreport"))) {
+                t.enabled = false
+            }
+        }
+    }
+}

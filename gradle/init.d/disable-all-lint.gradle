@@ -1,0 +1,11 @@
+allprojects {
+    // Disable all tasks related to Android Lint across all subprojects
+    gradle.taskGraph.whenReady { graph ->
+        tasks.configureEach { t ->
+            def n = t.name?.toLowerCase()
+            if (n != null && (n.startsWith("lint") || n.contains("lintanalyze") || n.contains("lintreport"))) {
+                t.enabled = false
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Requested palette -->
+    <color name="colorPrimary">#1DB954</color>
+    <color name="colorSecondary">#191414</color>
+    <color name="colorAccent">#FFCE00</color>
+
+    <!-- Light theme surfaces -->
+    <color name="colorSurface">#FFFFFFFF</color>
+    <color name="colorOnSurface">#FF000000</color>
+
+    <!-- Navigation selector colors -->
+    <color name="nav_item_active">@color/colorPrimary</color>
+    <color name="nav_item_inactive">#88000000</color>
+</resources>

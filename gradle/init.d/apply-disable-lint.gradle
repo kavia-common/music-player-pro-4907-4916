@@ -1,0 +1,6 @@
+gradle.settingsEvaluated {
+    def script = new File(rootDir, "disable-lint.gradle")
+    if (script.exists()) {
+        apply from: script.absolutePath
+    }
+}

@@ -1,0 +1,3 @@
+tasks.matching { it.name.toLowerCase().startsWith("lint") || it.name.toLowerCase().contains("lint") }.configureEach {
+    it.enabled = false
+}

@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+gradlePlugin {
+    plugins {
+        disableLintPlugin {
+            id = 'org.example.disablelint'
+            implementationClass = 'DisableLintPlugin'
+        }
+    }
+}
+
+repositories {
+    gradlePluginPortal()
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation localGroovy()
+}

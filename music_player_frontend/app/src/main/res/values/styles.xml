@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MusicPlayer.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">@color/colorSecondary</item>
+        <item name="android:navigationBarColor">@color/colorSecondary</item>
+
+        <item name="android:textColorPrimary">@color/colorOnSurface</item>
+        <item name="android:windowBackground">@color/colorSurface</item>
+    </style>
+</resources>
