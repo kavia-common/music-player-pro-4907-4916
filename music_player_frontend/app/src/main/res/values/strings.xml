@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sample Declarative Gradle Android App</string>
+    <string name="back">Back</string>
+    <string name="like">Like</string>
+    <string name="album_art">Album art</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="play_pause">Play/Pause</string>
+    <string name="volume">Volume</string>
 </resources>

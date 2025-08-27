@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mp_secondary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/mp_secondary"
+        android:padding="24dp">
+
+        <!-- Top bar -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_prev" />
+
+            <TextView
+                android:id="@+id/tvPlayingNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="PLAYING NOW"
+                android:textAllCaps="true"
+                android:textColor="@color/mp_text_secondary"
+                android:textSize="14sp"
+                android:letterSpacing="0.1" />
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/like"
+                android:tint="@color/mp_accent"
+                android:src="@drawable/ic_volume" />
+        </LinearLayout>
+
+        <!-- Album art area inspired by circular layers -->
+        <FrameLayout
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_album_art_circle" />
+
+            <ImageView
+                android:id="@+id/imgAlbum"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="@string/album_art"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <!-- Track title and artist -->
+        <TextView
+            android:id="@+id/tvTrackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Clint Eastwood"
+            android:textColor="@color/mp_white"
+            android:textStyle="bold"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gorillaz"
+            android:textColor="@color/mp_text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Seek/time row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvElapsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textColor="@color/mp_text_secondary"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:progressTint="@color/mp_primary"
+                android:thumbTint="@color/mp_accent"
+                android:progress="0"
+                android:max="354" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:54"
+                android:textColor="@color/mp_text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Controls -->
+        <LinearLayout
+            android:id="@+id/controlsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_square_button"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/previous"
+                android:tint="@color/mp_secondary"
+                android:src="@drawable/ic_prev" />
+
+            <ImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_round_button"
+                android:contentDescription="@string/play_pause"
+                android:tint="@color/mp_white"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_square_button"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/next"
+                android:tint="@color/mp_secondary"
+                android:src="@drawable/ic_next" />
+        </LinearLayout>
+
+        <!-- Volume -->
+        <LinearLayout
+            android:id="@+id/volumeRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/volume"
+                android:src="@drawable/ic_volume" />
+
+            <SeekBar
+                android:id="@+id/seekVolume"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="70"
+                android:progressTint="@color/mp_primary"
+                android:thumbTint="@color/mp_accent" />
+        </LinearLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+    </LinearLayout>
+</ScrollView>
